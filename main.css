@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Staatliches&display=swap');
+@import url(//db.onlinewebfonts.com/c/0923ee644c97a87d70269aa80a6f1e79?family=The+Historia+Demo);
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -42,6 +46,7 @@ header{
     height: 100vh;
     position: fixed;
     top: -100vh;
+    z-index: 50;
     background-color: #16162d;
     border-bottom-right-radius: 100%;
     border-bottom-left-radius: 100%;
@@ -81,7 +86,7 @@ li{
     border-radius: initial;
 }
 
-.menu-toggler{
+.menu-toggler {
     position: absolute;
     top: 5rem;
     right: 5rem;
@@ -116,7 +121,7 @@ li{
 }
 
 .open .bar.start{
-    transform: rotate(-450grad) translateX(.8rem);
+    transform: rotate(-450deg) translateX(.8rem);
 }
 
 .bar.end{
@@ -126,5 +131,62 @@ li{
 }
 
 .open .bar.end{
-    transform: rotate(-450grad) translateX(-.8rem);
+    transform: rotate(-450deg) translateX(-.8rem);
+}
+
+.landing-text{
+    position: absolute;
+    top: 30%;
+    transform: translateX(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.landing-text h1{
+    font-size: 13rem;
+    font-family: 'The Historia Demo', sans-serif;
+    background: linear-gradient(to top, #ffe838,#fd57bf);
+    background-clip: unset;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 1rem;
+    user-select: none;
+}
+
+.landing-text h6{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.about .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-heading{
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 0;
+    margin-bottom: 6rem;
+}
+
+.about-heading h1{
+    font-size: 10rem;
+    opacity: .3;
+}
+
+.about-heading h6{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.profile-img{
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.about-details{
+
 }
