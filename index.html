@@ -11,37 +11,27 @@
     </head>
     <body>
         <header>
-            <div class="menu-toggler">
-                <div class="bar half start"></div>
-                <div class="bar"></div>
-                <div class="bar half end"></div>
-            </div>
-            <nav class="top-nav">
-                <ul class="nav-list">
-                <li>
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li>
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li>
-                    <a href="#services" class="nav-link">Services</a>
-                </li>
-                <li>
-                    <a href="#portfolio" class="nav-link">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
+        <div class="jumbotron photo-cover ">
+            <nav class="nav">
+                <div class="container">
+                    <div class="logo">
+                        <a href="#">Filip Risteski</a>
+                    </div>
+                    <div id="mainListDiv" class="main_list">
+                        <ul class="navlinks">
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
             <div class="landing-text">
                 <h1>Filip Risteski</h1>
                 <h6>Web Developer</h6>
             </div>
+        </div>
         </header>
         <section class="about" id="about">
             <div class="container">
@@ -78,9 +68,11 @@
                     </div>
                 </div>  
             </div>
+        </div>
         </section>
 
         <section class="services" id="services">
+            <div class="container-big cover-section">
             <div class="container">
                 <div class="section-heading">
                     <h1>Services</h1>
@@ -116,6 +108,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </section>
 
         <section class="portfolio" id="portfolio">
@@ -210,5 +203,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="main.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            $(window).scroll(function() {
+                if ($(document).scrollTop() > 50) {
+                    $('.nav').addClass('affix');
+                    console.log("OK");
+                } else {
+                    $('.nav').removeClass('affix');
+                }
+            });
+        </script>
     </body>
 </html>

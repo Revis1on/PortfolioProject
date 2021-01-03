@@ -1,8 +1,4 @@
 $(document).ready(function () {
-$('.menu-toggler').on('click', function () {
-    $(this).toggleClass('open');
-    $('.top-nav').toggleClass('open');
-});
 
 $('.top-nav .nav-link').on('click', function () {
     $('.menu-toggler').removeClass('open');
@@ -15,6 +11,13 @@ $('.nav a[href*="#"]').on('click', function () {
   }, 2000);
 });
 
+$('.navTrigger').click(function () {
+    $(this).toggleClass('active');
+    console.log("Clicked menu");
+    $("#mainListDiv").toggleClass("show_list");
+    $("#mainListDiv").fadeIn();
+
+});
 });
 
 
