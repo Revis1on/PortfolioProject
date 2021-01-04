@@ -300,7 +300,6 @@ li{
     transform: translateX(-50%, -50%);
     width: 100%;
     text-align: center;
-    z-index: 1;
 }
 
 .landing-text h1{
@@ -568,7 +567,7 @@ input[type="submit"]:hover{
 
 
     .landing-text h1{
-        font-size: 15rem;
+        font-size: 11rem;
     }
 
     .landing-text h6{
@@ -613,19 +612,6 @@ input[type="submit"]:hover{
         font-size: 4rem;
     }
 
-    .timeline{
-        margin: 0 0 0 auto;
-    }
-
-    .timeline .date::before{
-        left: -19rem;
-    }
-
-    .timeline .date::after{
-        left: -5.9rem;
-    }
-
-
 }
 
 @media screen and (max-width: 600px){
@@ -633,7 +619,7 @@ input[type="submit"]:hover{
   
 
     .landing-text h1{
-        font-size: 8rem;
+        font-size: 7rem;
     }
     .landing-text h6{
         font-size: 1.4rem;
@@ -663,14 +649,6 @@ input[type="submit"]:hover{
         order: 2;
     }
 
-    .timeline p{
-        font-size:  1.6rem;
-    }
-
-    .timeline .date::before{
-        font-size: 1.4rem;
-    }
-
     form{
         width: 100%;
     }
@@ -694,18 +672,13 @@ input[type="submit"]:hover{
 
 /* Media qurey section */
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .container {
-        margin: 0;
-    }
-}
-
 @media screen and (max-width:768px) {
     .navTrigger {
         display: block;
+        
     }
     .nav div.logo {
-        margin-left: 15px;
+        margin-left: 1px;
     }
     .nav div.main_list {
         width: 100%;
@@ -719,13 +692,14 @@ input[type="submit"]:hover{
     .nav div.main_list ul {
         flex-direction: row;
         width: 100%;
-        height: 20vh;
+        height: 10vh;
         right: 0;
         left: 0;
         bottom: 0;
-        background-color: #111;
+        background-color: rgb(17, 17, 17, 1);
         /*same background color of navbar*/
         background-position: center top;
+        z-index: 1;
     }
     .nav div.main_list ul li {
         width: 100%;
@@ -734,7 +708,7 @@ input[type="submit"]:hover{
     .nav div.main_list ul li a {
         text-align: center;
         width: 100%;
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding: 20px;
     }
     .nav div.media_button {
