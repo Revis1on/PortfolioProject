@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 html{
@@ -83,7 +84,7 @@ img{
 }
 
 .section-heading h1::before{
-    width: 70rem;
+    width: 30rem;
     height: 3px;
     border-radius: .8rem;
 }
@@ -118,12 +119,11 @@ header{
 
 
   .photo-cover {
-    background: #34495e url(./Images/coverbg.jpg)  no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100%;
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
+    background-position: center top;
+	background-size:cover;
 
   }
 
@@ -185,22 +185,6 @@ header{
     color: #00E676;
 }
 
-
-.top-nav{
-    width: 100%;
-    position: relative;
-    z-index: 50;
-    border-bottom-right-radius: 100%;
-    border-bottom-left-radius: 100%;
-}
- .transparent {
-    background: transparent;
-  }
-  
-  .navbar-inverse {
-    transition: all 0.2s ease-in;
-  }
-  
 
 .nav-list{
     list-style: none;
@@ -615,9 +599,6 @@ input[type="submit"]:hover{
 }
 
 @media screen and (max-width: 600px){
-   
-  
-
     .landing-text h1{
         font-size: 7rem;
     }
@@ -664,21 +645,19 @@ input[type="submit"]:hover{
     z-index: 3;
 }
 
-@media all and (max-width:700px){
-	.myP {
-		padding:2%;
-	}
-}
-
 /* Media qurey section */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
+    }
+}
 
 @media screen and (max-width:768px) {
     .navTrigger {
         display: block;
-        
     }
     .nav div.logo {
-        margin-left: 1px;
+        margin-left: 15px;
     }
     .nav div.main_list {
         width: 100%;
@@ -690,16 +669,15 @@ input[type="submit"]:hover{
         display: none;
     }
     .nav div.main_list ul {
-        flex-direction: row;
+        flex-direction: column;
         width: 100%;
-        height: 10vh;
+        height: 100vh;
         right: 0;
         left: 0;
         bottom: 0;
-        background-color: rgb(17, 17, 17, 1);
+        background-color: #111;
         /*same background color of navbar*/
         background-position: center top;
-        z-index: 1;
     }
     .nav div.main_list ul li {
         width: 100%;
@@ -708,7 +686,7 @@ input[type="submit"]:hover{
     .nav div.main_list ul li a {
         text-align: center;
         width: 100%;
-        font-size: 1.5rem;
+        font-size: 3rem;
         padding: 20px;
     }
     .nav div.media_button {
